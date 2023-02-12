@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpDemoProject", "RestSharpDemoProject.csproj", "{D79DF9B6-1ABE-403D-82A0-6C4A9002564E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubApiTests", "..\GitHubApiTests\GitHubApiTests.csproj", "{115731C1-223F-409C-966A-6A91A6A5E4AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D79DF9B6-1ABE-403D-82A0-6C4A9002564E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79DF9B6-1ABE-403D-82A0-6C4A9002564E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79DF9B6-1ABE-403D-82A0-6C4A9002564E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79DF9B6-1ABE-403D-82A0-6C4A9002564E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{115731C1-223F-409C-966A-6A91A6A5E4AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{115731C1-223F-409C-966A-6A91A6A5E4AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{115731C1-223F-409C-966A-6A91A6A5E4AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{115731C1-223F-409C-966A-6A91A6A5E4AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B12DC1B-B3D2-41F2-A22B-3D8151A1791A}
+	EndGlobalSection
+EndGlobal
