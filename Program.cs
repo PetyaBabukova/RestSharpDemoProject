@@ -84,7 +84,7 @@ namespace RestSharpDemoProject
              request.AddUrlSegment("user", "petyababukova"); //segment
              request.AddUrlSegment("repoName", "postman"); //segment
 
-             client.Authenticator = new HttpBasicAuthenticator("petyababukova", "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"); //This is the better way but we can also add Header and put in it Autorization instead of this.
+             client.Authenticator = new HttpBasicAuthenticator("petyababukova", "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"); //This is the better way but we can also add Header and put in it Autorization instead of this.
 
              var issueBody = new
              {
