@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using GitHubApiTests;
+using RestSharp;
 using RestSharp.Authenticators;
 using System.Text.Json;
 
@@ -11,22 +12,23 @@ namespace RestSharpDemoProject
             RestClient client = new RestClient("https://api.github.com"); //Host
 
             //Get single issue
-            /*RestRequest request = new RestRequest("/repos/petyababukova/postman/issues/41", Method.Get); //Path
+
+            RestRequest request = new RestRequest("/repos/petyababukova/postman/issues/43", Method.Get); //Path
 
             var response = client.Execute(request);
 
             //Console.WriteLine("STATUS CODE: " + response.StatusCode);
-            //Console.WriteLine("RESPONSE: " + response.Content);
-            
+            Console.WriteLine("RESPONSE: " + response.Content);
+
             var issue = JsonSerializer.Deserialize<Issue>(response.Content);
             Console.WriteLine("Issue name: " + issue.title);
-            Console.WriteLine("Issue number: " + issue.number);*/
+            Console.WriteLine("Issue number: " + issue.number);
 
 
 
 
             //Get labels
-            /*RestRequest requestAllIssuesLabels = new RestRequest("/repos/petyababukova/postman/issues/41/labels", Method.Get); //Path
+            RestRequest requestAllIssuesLabels = new RestRequest("/repos/petyababukova/postman/issues/41/labels", Method.Get); //Path
             var responseLabels = client.Execute(requestAllIssuesLabels);
 
             var labels = JsonSerializer.Deserialize<List<Labels>>(responseLabels.Content);
@@ -36,13 +38,13 @@ namespace RestSharpDemoProject
                 Console.WriteLine("Label name: " + label.name);
                 Console.WriteLine("Label ID: " + label.id);
                 Console.WriteLine();
-            }*/
+            }
 
 
 
 
             //Get All issues
-            /*RestRequest requestAllIssues = new RestRequest("/repos/petyababukova/postman/issues", Method.Get); //Path
+            RestRequest requestAllIssues = new RestRequest("/repos/petyababukova/postman/issues", Method.Get); //Path
 
             var responseAll = client.Execute(requestAllIssues);
 
@@ -53,7 +55,7 @@ namespace RestSharpDemoProject
             {
                 Console.WriteLine("Issue name: " + issueAll.title);
                 Console.WriteLine("Issue number: " + issueAll.number);
-            }*/
+            }
 
 
 
@@ -78,30 +80,33 @@ namespace RestSharpDemoProject
 
 
             //Create new issue
-            RestRequest request = new RestRequest("/repos/{user}/{repoName}/issues", Method.Post); //Path
-            request.AddUrlSegment("user", "petyababukova"); //segment
-            request.AddUrlSegment("repoName", "postman"); //segment
+            /* RestRequest request = new RestRequest("/repos/{user}/{repoName}/issues", Method.Post); //Path
+             request.AddUrlSegment("user", "petyababukova"); //segment
+             request.AddUrlSegment("repoName", "postman"); //segment
 
-            client.Authenticator = new HttpBasicAuthenticator("petyababukova", "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"); //This is the better way but we can also add Header and put in it Autorization instead of this.
+             client.Authenticator = new HttpBasicAuthenticator("petyababukova", "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"); //This is the better way but we can also add Header and put in it Autorization instead of this.
 
-            var issueBody = new
-            {
-                title = "Test from RestSharp " + DateTime.Now.Ticks,
-                body = "Some description on my body issue",
-                labels = new string[] {"bug", "My label", "critical" }
-            };
+             var issueBody = new
+             {
+                 title = "Test from RestSharp " + DateTime.Now.Ticks,
+                 body = "Some description on my body issue",
+                 labels = new string[] { "bug", "12-02", "critical" }
+             };
 
-            request.AddBody(issueBody);
+             request.AddBody(issueBody);
 
-            var response = client.Execute(request);
+             var response = client.Execute(request);
+
+             var issue = JsonSerializer.Deserialize<Issue>(response.Content);
 
 
-            var issue = JsonSerializer.Deserialize<Issue>(response.Content);
+             Console.WriteLine("STATUS CODE: " + response.StatusCode);
+             Console.WriteLine("Issue name: " + issue.title);
+             Console.WriteLine("Issue number: " + issue.number);
+             Console.WriteLine();*/
 
-            Console.WriteLine("STATUS CODE: " + response.StatusCode);
-            Console.WriteLine("Issue name: " + issue.title);
-            Console.WriteLine("Issue number: " + issue.number);
-            Console.WriteLine();
+
         }
+
     }
 }

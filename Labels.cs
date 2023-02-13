@@ -1,4 +1,4 @@
-﻿namespace RestSharpDemoProject
+﻿namespace GitHubApiTests
 {
     internal class Labels
     {
